@@ -8,7 +8,6 @@ export class AppComponent {
   input: string = '';
   result: string = '';
 
-
   pressNum(num: string) {
 
     //Do Not Allow . more than once
@@ -21,8 +20,7 @@ export class AppComponent {
       }
     }
 
-    //Do Not Allow 0 at beginning. 
-    //Javascript will throw Octal literals are not allowed in strict mode.
+    //Para di mag 0
     if (num == "0") {
       if (this.input == "") {
         return;
@@ -52,7 +50,7 @@ export class AppComponent {
 
   pressOperator(op: string) {
 
-    //Do not allow operators more than once
+    //Para usa la it operator na gagamiton
     const lastKey = this.input[this.input.length - 1];
     if (lastKey === '/' || lastKey === '*' || lastKey === '-' || lastKey === '+') {
       return;
